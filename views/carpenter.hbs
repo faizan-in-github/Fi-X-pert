@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>carpenter</title>
+  <style>
+    body {
+      font-family: "Nixie One", 'Times New Roman', Times, serif;
+      background-image: url(https://images.pexels.com/photos/4744858/pexels-photo-4744858.jpeg?auto=compress&cs=tinysrgb&w=600);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 800vh;
+    }
+
+    .container {
+      max-width: 800px;
+      margin-top:50px;
+      margin-left: 253px;
+      padding: 15px;
+      background-color: rgba(241, 245, 218, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .container1 {
+      max-width: 800px;
+      margin-top:50px;
+      margin-left: 253px;
+      padding: 15px;
+      background-color: rgba(245, 247, 238, 0.6);
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-family: "Nixie One", 'Times New Roman', Times, serif;
+    }
+    .container2 {
+      max-width: 800px;
+      margin-top:50px;
+     font-size: large;
+      padding: 15px;
+      background-color: rgba(5, 212, 15, 0.6);
+      border-radius: 10px;
+      border: #030000 5px solid;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-family: "Nixie One", 'Times New Roman', Times, serif;
+    }
+
+    h1 {
+      text-align: center;
+      color: #050000;
+    }
+
+    form {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #030000;
+      font-weight: bold;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .phot{
+        color: #030000;
+        font-size: 20px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #388E3C;
+    }
+
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .result h2 {
+      margin-top: 0;
+      color: #333;
+    }
+
+    .result p {
+      color: #666;
+    }
+
+    .chat-button {
+      margin-top: 10px;
+    }
+    .chat-button img{
+    width: 20%;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Please enter your Location</h1>
+    <h5>To get all options press '*'</h5>
+    <form action="/auth/carpenter" method="post">
+      <label for="location">Location:</label>
+      <input type="text" name="location" id="location">
+      <button type="submit">Search</button>
+    </form>
+  </div>
+ {{#if msg}}
+<div class="container1">
+    
+        <p>{{msg}}</p>
+       
+   </div> 
+    {{/if}} 
+  <div class="container1">
+    <h2>About our Carpentary Services,</h2>
+    <p>Discover the best Carpentary in town, carefully selected by our experienced resource persons. Trust in their exceptional skills and expertise for all your carpentary needs. Experience top-notch service and unmatched professionalism. Choose us for reliable and efficient Carpentary solutions.</p>
+  </div>
+  
+ {{#if carpenters}}
+  <div class="container1">
+ 
+    <ul>
+      {{#each carpenters}}
+      <div class="container2">
+        
+          <p>Name: {{name}}</p>
+          <p>Phone Number: {{phoneNumber}}</p>
+          <p>Address: {{address}}</p>
+          <a class="chat-button" href="https://wa.me/{{phoneNumber}}"><img src="data:image/png;base64,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"></a>
+        
+        </div>
+      {{/each}}
+    </ul>
+  </div>
+ {{/if}}
+  
+  <div class="container1">
+    <h2>Are you a carpenter? Or do you know any carpenter?</h2>
+    <a class="phot" href="/carpenterentry">Provide Information</a>
+  </div>
+</body>
+</html>

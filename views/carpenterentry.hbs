@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carpenter Details</title>
+    <style>
+        body {
+
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            font-family: "Nixie One", 'Times New Roman', Times, serif;
+            background-image: url(https://c0.wallpaperflare.com/preview/931/435/726/craft-dovetail-woodworking.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 200vh;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color:rgba(209, 11, 209, 0.7);
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            align-items: center;
+            margin-left:175px;
+        }
+
+        button:hover {
+            background-color: #054e09;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Carpenter Details</h1>
+        {{#if msg}}
+        <p>{{msg}}</p>
+        {{/if}}
+        <form action="/auth/carpenterentry" method="post">
+            <label for="CarpenterId">Carpenter ID:</label>
+            <input type="text" id="carpenterid" name="carpenterid" required>
+
+            <label for="carpenterName">Carpenter Name:</label>
+            <input type="text" id="plumberName" name="carpentername" required>
+
+            <label for="carpenterPhoneNumber">Carpenter PhoneNumber:</label>
+            <input type="text" id="CarpenterPhoneNumber" name="carpenterphonenumber" required>
+
+            <label for="carpenterAddress">carpenter Address:</label>
+            <input type="text" id="plumberAddress" name="carpenterAddress" required>
+
+            <label for="carpenterLocation">carpenter Location:</label>
+            <input type="text" id="carpenterLocation" name="carpenterLocation" required>
+        <div class="button">
+            <br>
+            <button type="submit">Sign-UP</button>
+        </div>
+        </form>
+    </div>
+</body>
+
+</html>

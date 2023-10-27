@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>login-page</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nixie+One&family=Playfair+Display&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 id="v">Let's get Started,</h1>
+<div class="container">
+    <div class="headtext">
+        <h4>LOGIN</h4>
+        {{#if msg}}
+        <p>{{msg}}</p>
+        {{/if}}
+        <form action="/auth/login" method="post">
+        <div class="data">
+            <label for="email">Username</label>
+        <input type="text" name="username" id="username"><br><br>
+        <label for="Password">Password</label>
+        <input type="Password" name="Password" id="Password"><br><br>
+        </div>
+        <div class="button">
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+        
+        <div class="signup">
+            Not a member?, <a href="/register" id="sign-up">Sign-up</a>
+        </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

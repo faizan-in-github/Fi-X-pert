@@ -1,0 +1,260 @@
+* {
+    margin: 0px;
+    padding: 0;
+    font-family: "Nixie One",'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    
+}
+
+body {
+
+    background-color: rgb(255, 255, 255);
+}
+
+#header {
+    height: 100vh;
+    width: 100%;
+    background-image: url(https://img.freepik.com/premium-photo/many-tools-isolated_8595-247.jpg?w=2000);
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 5px;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5px;
+
+}
+.logo{
+    height: auto;
+    width: 180px;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin: 10px 10px;
+    list-style:none;
+}
+nav ul li a{
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 25px;
+    position: relative;
+}
+nav ul li a::after{
+    content:'';
+    width: 0;
+    height:3px;
+    background:#ff004f ;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+nav ul li a:hover::after{
+    content:'';
+    width: 100%;
+    height:3px;
+    background:#ff004f ;
+    position: absolute;
+    left: 0;
+    bottom:-6px;
+    transition: 0.5s;
+}
+#headertext {
+    color:black;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
+    font-family:"Nixie One",'Times New Roman', Times, serif;
+    margin-top: 100px;
+
+    
+}
+.about{
+    padding:80p 0x ; 
+    color: aliceblue;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.aboutcol2{
+    color:rgb(14, 8, 8);
+    flex-basis: 50%;
+   
+    
+}
+.aboutcol1{
+   flex-basis: 35%;
+    
+}
+
+.sub{
+    font-size: 30px;
+    font-weight: 900;
+    text-align:justify;
+    padding-right: 250px;
+}
+.aboutcol1 img{
+    width:650px
+    
+}   
+.tabtitle{
+    display:flex;
+    margin:20px 0 40px;
+    font-weight: 600;
+
+}
+.tablinks{
+margin-left:150px;
+font-size: 30px;
+font: weight 50%; ;
+position: relative;
+text-align:justify;
+
+}
+
+
+
+.aboutcol2 h1{
+    color:rgb(14, 8, 8);
+    font-size: 30px;
+    text-align: center;
+    padding-right: 150px;
+    
+}
+.aboutcol2 p{
+    color:rgb(14, 8, 8);
+    text-align: justify;
+    padding-right: 150px;
+    
+}
+.tabcontent ul li{
+   list-style:none;
+   margin:10px 0;
+   margin-left:75px;
+   font-size: 15px;
+   padding-left: 0px;
+
+
+}
+.tabcontent ul li span{
+    color:black;
+    font-size: 25px;
+
+}
+/* .tabcontent{
+    display:none;
+ 
+ } */
+.tabcontent.actilink{
+    display:block;
+
+}
+.services{
+    padding:30px 0;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+.serviceslist{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap:40px;
+    margin-top: 50px;
+}
+.carpenter img{
+  width:50%;
+  margin-left: 70px;
+}
+.electrician img{
+    width:35%;
+    margin-left: 90px;
+    margin-top: 20px;
+  }
+.plumber img{
+    width:55%;
+    margin-left: 70px;
+  }
+  .subtitle{
+    text-align: center;
+  }
+.contactpage{
+    padding:30px 0;
+    margin-left: 100px;
+    margin-right: 20px;
+}
+.socialmedia{
+    display:grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:30px;
+    margin-top: 50px;
+    margin-left:50px;
+} 
+.instagram a img {
+    width:40%
+  }
+.twitter a img {
+    width:40%
+  }
+.whatapp a img {
+    width:10%
+  }
+#contactprompt{
+    text-align: center;
+    margin-left: -140px;
+  } 
+.start img{
+    margin-top: 5px;
+    border:5px solid;
+    border-color: black;
+    width: 270px;
+}
+.lasttext{
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    #headertext {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .aboutcol1 img {
+        width: 100%;
+    }
+
+    .sub {
+        padding-right: 20px;
+    }
+
+    .tablinks {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .serviceslist {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 20px;
+    }
+
+    .carpenter img,
+    .electrician img,
+    .plumber img {
+        width: 100%;
+    }
+
+    .socialmedia {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-gap: 15px;
+        margin-left: 30px;
+    }
+}
